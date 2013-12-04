@@ -1,0 +1,61 @@
+/* 
+    Document   : style
+    Created on : Nov 22, 2013, 8:44:39 AM
+    Author     : manujith
+    Description:
+        Main style sheet for Audroid desginer
+*/
+
+html,body{
+    margin:0px;
+    padding:0px;
+}
+
+#simu-window{
+   
+}
+#size{
+    border:1px solid #CCCCCC;
+    margin:0 auto;
+}
+
+.port .small{
+    height: 320px;
+    width: 240px;
+}
+.port .normal{
+    height:400px;
+    width:240px;
+}
+.port .large{
+    height: 800px;
+    width: 480px;
+}
+.port .xlarge{
+    height: 1024px;
+    width: 600px;
+}
+
+.land .small{    
+    height:240px;
+    width:320px;
+}
+.land .normal{
+    height: 240px;
+    width: 400px;
+}
+.land .large{    
+    height:480px;
+    width:800px;
+}
+.land .xlarge{    
+    height:600px;
+    width:1024px;
+}
+
+iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+

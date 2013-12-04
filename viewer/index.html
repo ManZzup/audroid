@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AUDroid Designer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>	
+                                
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        
+            <div class="control">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Controller</div>
+                    <div class="panel-body">
+                        <span class="label label-primary">Path to layout (ex: /var/www/mysite/index.html) :</span>
+                        <input type="text" class="form-control" name="layiout" id="layout" value="/var/www/front/index.html" />
+                        <input type="button" class="btn btn-primary" id="submit" value="Refresh" />
+                        <br /><br />
+                        <span class="label label-primary">Select Screen Size :</span>
+                        <select class="form-control" id="cmbSize">                            
+                            <option value="small">Small</option>
+                            <option value="normal" selected="selected">Normal</option>
+                            <option value="large">Large</option>
+                            <option value="xlarge">Extra Large</option>
+                        </select>
+                        
+                        <br />
+                        <span class="label label-primary">Select Screen Orientation :</span>
+                        <select class="form-control" id="cmbOrientation">
+                            <option value="port" selected="selected">Portrait</option>
+                            <option value="land">Landscape</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+      
+        
+            <div id="orientation" class="port">
+                <div class="panel panel-default">
+                    <div class="panel-heading">View</div>
+                    <div class="panel-body">
+                    <div id="size" class="small">                        
+                        
+                            <iframe id="simu-window"></iframe>
+                        
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
+        
+        
+        <script>
+            $("#submit").click(function(){
+                var url = $("#layout").val();
+                if(url != ""){
+                    $("#simu-window").attr("src",url);                    
+                }
+            });
+            
+            $("#cmbOrientation").change(function(){
+                $("#orientation").attr("class",$(this).val());
+            });
+            
+            $("#cmbSize").change(function(){
+                $("#size").attr("class",$(this).val());
+            });
+        </script>
+    </body>
+</html>
