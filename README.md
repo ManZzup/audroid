@@ -92,7 +92,7 @@ WebView wb = (WebView) findViewById(R.id.wb);
 //Make new instance of Audroid
 Audroid aud = new Audroid(this,wb);
 
-/Lets select the button and textbox from above page
+//Lets select the button and textbox from above page
 DomElement btn = aud.findByID("test");
 DomElement txt = aud.findByName("user");
 
